@@ -1,0 +1,518 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+body {
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: #007bff;
+    color: white;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 50px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Make the search container take full width */
+    max-width: 500px; /* Optional: Limit max width for better design */
+    margin: 0 20px; /* Add spacing on left and right sides */
+}
+
+.search-container input {
+    flex-grow: 1; /* Make the input fill the remaining space */
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search-container input {
+    padding: 10px;
+    width: 200px;
+    border-radius: 4px;
+    border: none;
+}
+
+.search-button {
+    position: absolute;
+    right: 10px;
+    background: transparent;
+    border: none;
+    color: #333;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    text-align: center;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.login-btn, .landowner-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login-btn:hover, .landowner-btn:hover {
+    background-color: #218838;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://via.placeholder.com/1400x600') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 25px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.hero .btn:hover {
+    background-color: #e65b50;
+}
+
+/* Listings Section */
+.listings {
+    padding: 50px;
+    text-align: center;
+}
+
+.listings h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.properties {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.property {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.property img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.property h3 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.property p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.property .price {
+    font-size: 1.2em;
+    color: #28a745;
+    margin-top: 10px;
+}
+
+.property .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.property .btn:hover {
+    background-color: #0056b3;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.footer-container p {
+    margin-bottom: 5px;
+}
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Make the search container take full width */
+    max-width: 500px; /* Optional: Limit max width for better design */
+    margin: 0 20px; /* Add spacing on left and right sides */
+}
+
+.search-container input {
+    flex-grow: 1; /* Make the input fill the remaining space */
+    padding: 10px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Make the navbar fixed at the top */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff; /* Background color for the navbar */
+    z-index: 1000; /* Ensures it stays above other elements */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for effect */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.logo {
+    height: 50px;
+}
+
+/* Style for the search form and buttons */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn, .landowner-btn {
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 8px 12px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Additional spacing for sections to prevent overlap */
+.hero, .listings, footer {
+    padding-top: 80px; /* Adjust based on navbar height */
+}
+
+
+
+
+
+/* Hero Section with Carousel */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    background-color: #333;
+    padding: 40px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.hero-content .btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+/* Carousel Container */
+.carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Carousel Inner - for sliding effect */
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel Item */
+.carousel-item {
+    min-width: 100%;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+/* Carousel Controls */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Positioning the controls on the left and right corners */
+.carousel-control.prev {
+    left: 10px; /* Position the previous button to the left corner */
+}
+
+.carousel-control.next {
+    right: 10px; /* Position the next button to the right corner */
+}
+
+/* Ensure controls are visible on top of the carousel */
+.carousel-control:hover {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
