@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_from_directory
 import cv2
 import torch
 import numpy as np
@@ -12,16 +12,15 @@ app = Flask(__name__)
 model = torch.hub.load('ultralytics/yolov5', 'yolov5s')
 
 # Define upload folder
-from flask import send_from_directory
-
-@app.route('/uploads/<filename>')
-def uploaded_file(filename):
-    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
-
 UPLOAD_FOLDER = 'uploads'
 if not os.path.exists(UPLOAD_FOLDER):
     os.makedirs(UPLOAD_FOLDER)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+
+# Route to serve uploaded files
+@app.route('/uploads/<filename>')
+def uploaded_file(filename):
+    return send_from_directory(app.config['UPLOAD_FOLDER'], filename)
 
 # Function to detect persons in an image
 def detect_persons(image_path):
@@ -71,8 +70,9 @@ def detect():
     # Perform person detection
     output_path = detect_persons(file_path)
     
-    # Return the output image path
-    return jsonify({"output_image": output_path})
+    # Return the output image URL
+    output_filename = os.path.basename(output_path)
+    return jsonify({"output_image": f"/uploads/{output_filename}"})
 
 # Run the Flask app
 if __name__ == '__main__':
